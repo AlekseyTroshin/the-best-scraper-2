@@ -1,0 +1,27 @@
+<style>
+	body {
+		font-family: Arial;
+	}
+	p {
+		margin: 5px 0;
+	}
+</style>
+
+<h1>Services</h1> 
+
+
+<div>
+	<a href="http://localhost:8080/max">MAX</a> 
+	||
+	<a href="http://localhost:8080/min">MIN</a>
+	||
+	<a href="http://localhost:8080/rand">RAND</a>
+</div>
+
+<ul>
+	{{range .Services}}
+		<li><p><a href="http://localhost:8080/choise?name={{.Domain}}">{{.Domain}}</a></p></li>
+	{{end}}
+</ul>
+
+<a href="http://localhost:8080/adminCheck">ADMIN</a>
